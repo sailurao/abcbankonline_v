@@ -1,4 +1,6 @@
-package com.example.demo;
+package com.example.demo.domain;
+
+        import com.fasterxml.jackson.annotation.JsonProperty;
 
         import javax.persistence.Entity;
         import javax.persistence.Id;
@@ -18,6 +20,7 @@ public class User {
 
     private String middleName;
 
+
     @NotBlank
     private String lastName;
 
@@ -33,74 +36,40 @@ public class User {
     @NotBlank
     private String password;
 
+
     public User() {
-        super();
     }
 
-    public User(int userId, String firstName, String middleName, String lastName, String emailId, String mobileNumber, String address, String password) {
-        super();
-        this.userId=userId;
-        this.firstName=firstName;
-        this.middleName=middleName;
-        this.lastName=lastName;
-        this.emailId=emailId;
-        this.mobileNumber=mobileNumber;
-        this.address=address;
-        this.password=password;
-    }
-
-
-    public int getUser_id() {
+    public int getUserId() {
         return userId;
     }
 
-
-    public void setUser_id(int userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-
-    public String getFirst_name() {
+    public String getFirstName() {
         return firstName;
     }
 
-
-    public void setFirst_name(String firstName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-
-    public String getMiddle_name() {
+    public String getMiddleName() {
         return middleName;
     }
 
-    public void setMiddle_name(String middleName) {
+    public void setMiddleName(String middleName) {
         this.middleName = middleName;
     }
 
-
-    public String getLast_name() {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLast_name(String lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getEmailId() {
-        return emailId;
-    }
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
-
-    public String getMobile_number() {
-        return mobileNumber;
-    }
-
-    public void setMobile_number(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
     }
 
     public String getAddress() {
@@ -111,6 +80,22 @@ public class User {
         this.address = address;
     }
 
+    public String getEmailId() {
+        return emailId;
+    }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -118,6 +103,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }
 

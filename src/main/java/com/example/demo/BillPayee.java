@@ -18,13 +18,13 @@ public class BillPayee {
 
     private int accountId;
 
-    @NotBlank
+
     private String  payeeAccountNo;
 
-    @NotBlank
+
     private String payeePhone;
 
-    @NotBlank
+
     private String payeeAddress;
 
 

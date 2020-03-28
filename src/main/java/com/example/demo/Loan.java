@@ -21,9 +21,9 @@ public class Loan {
     private int userId;
 
     private int accountId;
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "MM-dd-yyyy HH:mm:ss")
     private LocalDateTime loanOpenDate;
-    @NotBlank
+
     private String loanStatus;
 
     private int loanTerm;

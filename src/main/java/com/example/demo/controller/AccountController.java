@@ -1,5 +1,8 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.Account;
+import com.example.demo.AccountNotFoundException;
+import com.example.demo.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +17,7 @@ import java.util.Optional;
 public class AccountController{
 
     @Autowired
-   AccountRepository accountRepository;
+    AccountRepository accountRepository;
 
     @GetMapping("/account")
     public List<Account> getAccount(){

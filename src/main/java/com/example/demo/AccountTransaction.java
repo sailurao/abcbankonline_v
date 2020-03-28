@@ -4,19 +4,22 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Table
+@IdClass(accountTransactionId.class)
 @Entity(name="account_transaction")
 public class AccountTransaction {
 
     @Id
     private int accountId;
 
-    @NotBlank
-    private String transactionNo;
+    @Id
+    private int transactionNo;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime transactionDate;
@@ -38,7 +41,7 @@ public class AccountTransaction {
         super();
     }
 
-    public AccountTransaction(int accountId,String transactionNo,LocalDateTime transactionDate,float transactionAmount,String transactionType,int loanId,int payeeId, float balance) {
+    public AccountTransaction(int accountId,int transactionNo,LocalDateTime transactionDate,float transactionAmount,String transactionType,int loanId,int payeeId, float balance) {
         super();
         this.accountId=accountId;
         this.transactionNo=transactionNo;
@@ -57,11 +60,11 @@ public class AccountTransaction {
         this.accountId = accountId;
     }
 
-    public String getTransactionNo() {
+    public int getTransactionNo() {
         return transactionNo;
     }
 
-    public void setTransactionNo(String transactionNo) {
+    public void setTransactionNo(int transactionNo) {
         this.transactionNo = transactionNo;
     }
 

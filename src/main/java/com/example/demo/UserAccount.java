@@ -12,8 +12,6 @@ public class UserAccount {
 
     @Id
     private int userId;
-
-
     private int accountId;
 
     public UserAccount() {

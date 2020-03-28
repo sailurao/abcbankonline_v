@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `user`
+-- Table structure for table `userModel`
 --
 
-DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS `userModel`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `user` (
+CREATE TABLE `userModel` (
   `user_id` int(50) NOT NULL,
   `first_name` varchar(45) NOT NULL,
   `middle_name` varchar(45) NOT NULL,
@@ -36,13 +36,13 @@ CREATE TABLE `user` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `userModel`
 --
 
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (22,'Vasu prkash','null ','prakash','24561 fountin park','vasukidhanaba234l@gmail.com','248238545','abcdef'),(23,'Vasuki','null ','prakash','24561 fountin park, novi','vasukidhanaba234l@gmail.com','2482385','abcdef'),(45,'Vasu','manickam ','prak','novi','vasuki234l@gmail.com','2482385','abcdef');
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+LOCK TABLES `userModel` WRITE;
+/*!40000 ALTER TABLE `userModel` DISABLE KEYS */;
+INSERT INTO `userModel` VALUES (22,'Vasu prkash','null ','prakash','24561 fountin park','vasukidhanaba234l@gmail.com','248238545','abcdef'),(23,'Vasuki','null ','prakash','24561 fountin park, novi','vasukidhanaba234l@gmail.com','2482385','abcdef'),(45,'Vasu','manickam ','prak','novi','vasuki234l@gmail.com','2482385','abcdef');
+/*!40000 ALTER TABLE `userModel` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

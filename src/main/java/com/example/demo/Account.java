@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -31,6 +32,7 @@ public class Account {
     private String accountStatus;
 
     @NotBlank
+    @Email
     private String emailId;
 
     @NotBlank
